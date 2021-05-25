@@ -61,7 +61,7 @@ ${parseData}
 const parseDate = timeParse("%Y-%m-%d");
 
 export function getData() {
-	const promiseMSFT = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/MSFT.tsv")
+	const promiseMSFT = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/MSFT.tsv")
 		.then(response => response.text())
 		.then(data => tsvParse(data, parseData(parseDate)))
 	return promiseMSFT;
@@ -72,7 +72,7 @@ ${parseData}
 const parseDateTime = timeParse("%Y-%m-%d %H:%M:%S");
 
 export function getData() {
-	const promiseIntraDayContinuous = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/bitfinex_xbtusd_1m.csv")
+	const promiseIntraDayContinuous = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/bitfinex_xbtusd_1m.csv")
 		.then(response => response.text())
 		.then(data => csvParse(data, parseData(parseDateTime)))
 		.then(data => {
@@ -89,7 +89,7 @@ const discontinuous = `
 ${parseData}
 
 export function getData() {
-	const promiseIntraDayDiscontinuous = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/MSFT_INTRA_DAY.tsv")
+	const promiseIntraDayDiscontinuous = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/MSFT_INTRA_DAY.tsv")
 		.then(response => response.text())
 		.then(data => tsvParse(data, parseData(d => new Date(+d))));
 	return promiseIntraDayDiscontinuous;
@@ -100,7 +100,7 @@ ${parseData}
 const parseDate = timeParse("%Y-%m-%d");
 
 export function getData() {
-	const promiseCompare = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/comparison.tsv")
+	const promiseCompare = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/comparison.tsv")
 		.then(response => response.text())
 		.then(data => tsvParse(data, d => {
 			d = parseData(parseDate)(d);
@@ -116,7 +116,7 @@ const bubbleData = `
 ${parseData}
 
 export function getData() {
-	const promiseBubbleData = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/bubble.json")
+	const promiseBubbleData = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/bubble.json")
 		.then(response => response.json());
 	return promiseBubbleData;
 }
@@ -126,7 +126,7 @@ const barData = `
 ${parseData}
 
 export function getData() {
-	const promiseBarData = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/barData.json")
+	const promiseBarData = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/barData.json")
 		.then(response => response.json());
 	return promiseBarData;
 }
@@ -136,7 +136,7 @@ const horizontalBarData = `
 ${parseData}
 
 export function getData() {
-	const promiseBarData = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/barData.json")
+	const promiseBarData = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/barData.json")
 		.then(response => response.json())
 		.then(barData => barData.map(({ x, y }) => ({ x: y, y: x })));
 
@@ -148,7 +148,7 @@ const groupedBarData = `
 ${parseData}
 
 export function getData() {
-	const promiseBarData = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/groupedBarData.json")
+	const promiseBarData = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/groupedBarData.json")
 		.then(response => response.json());
 	return promiseBarData;
 }
@@ -157,7 +157,7 @@ const horizontalGroupedBarData = `
 ${parseData}
 
 export function getData() {
-	const promiseBarData = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/groupedBarData.json")
+	const promiseBarData = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/groupedBarData.json")
 		.then(response => response.json())
 		.then(groupedBarData => {
 			return groupedBarData.map(d => {

@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rrag/react-stockcharts-examples2.git"
+    "url": "git+https://github.com/backenddevplus/react-stockcharts-examples2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rrag/react-stockcharts-examples2/issues"
+    "url": "https://github.com/backenddevplus/react-stockcharts-examples2/issues"
   },
-  "homepage": "https://github.com/rrag/react-stockcharts-examples2#readme",
+  "homepage": "https://github.com/backenddevplus/react-stockcharts-examples2#readme",
   "dependencies": {
     "fs-extra": "^4.0.2"
   }

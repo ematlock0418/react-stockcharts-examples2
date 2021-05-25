@@ -19,7 +19,7 @@ function parseData(parse) {
 const parseDateTime = timeParse("%Y-%m-%d %H:%M:%S");
 
 export function getData() {
-	const promiseIntraDayContinuous = fetch("https://cdn.rawgit.com/rrag/react-stockcharts/master/docs/data/bitfinex_xbtusd_1m.csv")
+	const promiseIntraDayContinuous = fetch("https://cdn.rawgit.com/backenddevplus/react-stockcharts/master/docs/data/bitfinex_xbtusd_1m.csv")
 		.then(response => response.text())
 		.then(data => csvParse(data, parseData(parseDateTime)))
 		.then(data => {

@@ -5,7 +5,7 @@ npm 3+
 
 
 ```
-$ git clone https://github.com/rrag/react-stockcharts-examples2
+$ git clone https://github.com/backenddevplus/react-stockcharts-examples2
 $ cd examples/<example you wish>
 
 $ npm install
